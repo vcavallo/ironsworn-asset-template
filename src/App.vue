@@ -39,7 +39,13 @@
       color="indigo"
       app
     >
-      <span class="white--text">&copy; 2019</span>
+    <v-row justify-space-between>
+      <v-col class="text-right">
+        <span class="white--text">
+          Created by <a href="https://vinneycavallo.com">Vinney Cavallo</a> | <a href="https://github.com/vcavallo/ironsworn-asset-template">GitHub Repo</a>
+        </span>
+      </v-col>
+    </v-row>
     </v-footer>
   </v-app>
 </template>
