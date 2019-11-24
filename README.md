@@ -20,5 +20,11 @@ yarn build
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# TODO:
+
+- [ ] add icons
+- [ ] add styles
+- [ ] export to image
+- [ ] print CSS styles
+- [ ] maybe "add another asset" to allow for a grid of many for printing
+- [ ] dropdown for different style flavors

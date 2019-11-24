@@ -3,7 +3,7 @@
     style="height: 100%;"
   >
     <v-row justify-space-between>
-      <v-col class="order-xs-1 order-md-12 col-12 col-md-6 pa-8">
+      <v-col class="order-xs-1 order-md-12 col-12 col-md-6">
         <v-row justify-content-end>
           <v-spacer />
           <v-col cols="3">
@@ -13,24 +13,30 @@
         </v-row>
 
         <v-row>
-          <v-col class="justify-center asset-card pa-4">
-            <v-row>
-              <h2>{{ assetType }}</h2>
-            </v-row>
+          <v-spacer />
+          <v-col cols="10">
+            <v-container fluid no-gutters class="asset-card py-0">
+              <v-row class="pl-0">
+                <v-col class="pt-3 pb-0 pl-2 black white--text">
+                  <h2>{{ assetType }}</h2>
+                </v-col>
+              </v-row>
 
-            <v-row>
-              <h1>{{ title }}</h1>
-            </v-row>
+              <v-row class="pl-2 pt-2">
+                <h1>{{ title }}</h1>
+              </v-row>
 
-            <v-row>
-              <p>{{ description }}</p>
-            </v-row>
+              <v-row class="pl-2 pb-0">
+                <p class="mb-0">{{ description }}</p>
+              </v-row>
 
-            <v-row v-for="effect in effects" :key="effect.id">
-              <AssetEffect :filled='effect.filled' :description="effect.description" />
-            </v-row>
+              <v-row v-for="effect in effects" :key="effect.id" class="pl-2 pt-0">
+                <AssetEffect :filled='effect.filled' :description="effect.description" />
+              </v-row>
+            </v-container>
           </v-col>
         </v-row>
+
       </v-col>
 
       <v-col class="order-xs-12 order-md-1 col-12 col-md-6 fixed-form pa-4">
@@ -123,9 +129,12 @@ export default {
 </script>
 
 <style scoped>
+
 .asset-card {
-  border: 1px solid grey;
   border-radius: 5px;
+  border: 2px solid black;
+  min-height: 440px;
+  width: 300px;
 }
 
 .fixed-form {
@@ -134,4 +143,16 @@ export default {
   overflow-y: scroll;
   */
 }
+
+body {
+  font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.header {
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 </style>
