@@ -19,7 +19,7 @@
 
     <v-app-bar
       app
-      color="indigo"
+      color="grey darken-2"
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -36,7 +36,7 @@
     </v-content>
 
     <v-footer
-      color="indigo"
+      color="grey darken-2"
       app
     >
     <v-row justify-space-between>
